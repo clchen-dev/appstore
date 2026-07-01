@@ -1,0 +1,35 @@
+name: Loki
+tags:
+    - 实用工具
+title: 日志聚合系统
+description: 日志聚合系统
+additionalProperties:
+    key: loki
+    name: Loki
+    tags:
+        - Tool
+    shortDescZh: 日志聚合系统
+    shortDescEn: Log aggregation system
+    type: website
+    crossVersionUpdate: false
+    limit: 0
+    recommend: 0
+    batchInstallSupport: true
+    website: https://grafana.com/oss/loki/
+    github: https://github.com/grafana/loki
+    document: https://grafana.com/docs/loki/latest/
+    description:
+        en: Log aggregation system
+        es-es: Sistema de agregación de registros
+        zh: 日志聚合系统
+        zh-Hant: 日誌聚合系統
+        ja: ログ集約システム
+        ms: Sistem pengagregatan log
+        pt-br: Sistema de agregação de logs
+        ru: Система агрегации логов
+        ko: 로그 집계 시스템
+        tr: Gunluk toplama sistemi
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7
