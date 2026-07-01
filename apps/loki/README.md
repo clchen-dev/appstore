@@ -7,7 +7,8 @@ Loki 是 Grafana Labs 的日志聚合系统，适合与 Grafana 一起查询和�
 - 默认端口：`3100`
 - 默认关闭多租户认证：`auth_enabled: false`
 - 默认使用本地 filesystem 存储
-- 默认日志保留时间：`720h`
+- 默认日志保留时间：`168h`
+- `project="example-project"` 的日志保留时间：`2160h`
 
 建议只在内网或 Tailscale 网络中访问 Loki，不要直接暴露到公网。
 
@@ -15,6 +16,13 @@ Loki 是 Grafana Labs 的日志聚合系统，适合与 Grafana 一起查询和�
 
 ```text
 trading server Alloy -> monitoring server Loki -> Grafana
+```
+
+建议交易系统日志统一使用以下 label：
+
+```text
+project="example-project"
+service="collector" 或 service="trader"
 ```
 
 Grafana 中添加 Loki 数据源：

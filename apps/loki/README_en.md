@@ -8,7 +8,8 @@ Grafana to query and visualize application logs.
 - Default port: `3100`
 - Multi-tenancy authentication is disabled by default: `auth_enabled: false`
 - Local filesystem storage is used by default
-- Default log retention: `720h`
+- Default log retention: `168h`
+- Logs with `project="example-project"` retention: `2160h`
 
 Expose Loki only on a private network or through Tailscale. Do not expose it
 directly to the public internet.
@@ -18,6 +19,13 @@ push Docker logs to Loki on the monitoring server:
 
 ```text
 trading server Alloy -> monitoring server Loki -> Grafana
+```
+
+Recommended labels for the trading system:
+
+```text
+project="example-project"
+service="collector" or service="trader"
 ```
 
 Add Loki as a Grafana data source:
