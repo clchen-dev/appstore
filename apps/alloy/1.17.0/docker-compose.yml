@@ -1,0 +1,38 @@
+services:
+  alloy:
+    image: grafana/alloy:v1.17.0
+    container_name: ${CONTAINER_NAME}
+    restart: unless-stopped
+    privileged: true
+    pid: host
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:12345"
+    environment:
+      HOST_LABEL: ${HOST_LABEL}
+      ENV_LABEL: ${ENV_LABEL}
+      REGION_LABEL: ${REGION_LABEL}
+      PROVIDER_LABEL: ${PROVIDER_LABEL}
+      ROLE_LABEL: ${ROLE_LABEL}
+      LOKI_URL: ${LOKI_URL}
+      METRICS_REMOTE_WRITE_URL: ${METRICS_REMOTE_WRITE_URL}
+    command:
+      - run
+      - --server.http.listen-addr=0.0.0.0:12345
+      - --storage.path=/var/lib/alloy/data
+      - /etc/alloy/config.alloy
+    volumes:
+      - ./conf/config.alloy:/etc/alloy/config.alloy:ro
+      - ./data:/var/lib/alloy/data
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /dev/disk:/dev/disk:ro
+    labels:
+      createdBy: "Apps"
+networks:
+  1panel-network:
+    external: true

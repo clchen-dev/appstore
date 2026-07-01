@@ -1,0 +1,91 @@
+additionalProperties:
+    formFields:
+        - default: 12345
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Web Port
+          labelZh: Web 端口
+          label:
+            en: Web Port
+            zh: Web 端口
+            zh-Hant: Web 埠
+          required: true
+          rule: paramPort
+          type: number
+        - default: server-01
+          edit: true
+          envKey: HOST_LABEL
+          labelEn: Host Label
+          labelZh: 服务器标识
+          label:
+            en: Host Label
+            zh: 服务器标识
+            zh-Hant: 伺服器標識
+          required: true
+          type: text
+        - default: prod
+          edit: true
+          envKey: ENV_LABEL
+          labelEn: Environment
+          labelZh: 环境
+          label:
+            en: Environment
+            zh: 环境
+            zh-Hant: 環境
+          required: true
+          type: text
+        - default: default
+          edit: true
+          envKey: REGION_LABEL
+          labelEn: Region
+          labelZh: 区域
+          label:
+            en: Region
+            zh: 区域
+            zh-Hant: 區域
+          required: true
+          type: text
+        - default: unknown
+          edit: true
+          envKey: PROVIDER_LABEL
+          labelEn: Provider
+          labelZh: 服务商
+          label:
+            en: Provider
+            zh: 服务商
+            zh-Hant: 服務商
+          required: true
+          type: text
+        - default: app
+          edit: true
+          envKey: ROLE_LABEL
+          labelEn: Role
+          labelZh: 角色
+          label:
+            en: Role
+            zh: 角色
+            zh-Hant: 角色
+          required: true
+          type: text
+        - default: http://loki:3100/loki/api/v1/push
+          edit: true
+          envKey: LOKI_URL
+          labelEn: Loki Push URL
+          labelZh: Loki 推送地址
+          label:
+            en: Loki Push URL
+            zh: Loki 推送地址
+            zh-Hant: Loki 推送位址
+          required: true
+          type: text
+        - default: http://victoriametrics:8428/api/v1/write
+          edit: true
+          envKey: METRICS_REMOTE_WRITE_URL
+          labelEn: Metrics Remote Write URL
+          labelZh: 指标 Remote Write 地址
+          label:
+            en: Metrics Remote Write URL
+            zh: 指标 Remote Write 地址
+            zh-Hant: 指標 Remote Write 位址
+          required: true
+          type: text

@@ -1,0 +1,28 @@
+name: Grafana Alloy
+tags:
+    - 实用工具
+title: 可编程遥测采集器
+description: 可编程遥测采集器
+additionalProperties:
+    key: alloy
+    name: Grafana Alloy
+    tags:
+        - Tool
+    shortDescZh: 采集 Docker 日志、容器指标和应用指标
+    shortDescEn: Collect Docker logs, container metrics, and application metrics
+    type: tool
+    crossVersionUpdate: false
+    limit: 1
+    recommend: 0
+    batchInstallSupport: true
+    website: https://grafana.com/oss/alloy/
+    github: https://github.com/grafana/alloy
+    document: https://grafana.com/docs/alloy/latest/
+    description:
+        en: Programmable telemetry collector for logs, metrics, traces, and profiles.
+        zh: 面向日志、指标、链路和性能剖析的可编程遥测采集器。
+        zh-Hant: 面向日誌、指標、鏈路和效能剖析的可程式化遙測採集器。
+    architectures:
+      - amd64
+      - arm64
+      - arm/v7
