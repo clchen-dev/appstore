@@ -8,7 +8,7 @@ Grafana to query and visualize application logs.
 - Default port: `3100`
 - Multi-tenancy authentication is disabled by default: `auth_enabled: false`
 - Local filesystem storage is used by default
-- Default log retention: `168h`
+- Default log retention: `720h`
 
 Expose Loki only on a private network or through Tailscale. Do not expose it
 directly to the public internet.
