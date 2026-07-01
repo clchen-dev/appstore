@@ -1,0 +1,25 @@
+name: Whoami Demo
+tags:
+  - 实用工具
+title: 返回请求与容器信息的极简 HTTP 服务（自建示例应用）
+description: 返回请求与容器信息的极简 HTTP 服务（自建示例应用）
+additionalProperties:
+  key: whoami-demo
+  name: Whoami Demo
+  tags:
+    - Tool
+  shortDescZh: 返回请求/容器信息的极简服务（自建示例）
+  shortDescEn: Tiny HTTP service echoing request & container info (custom example)
+  description:
+    zh: 一个极简的 HTTP 服务，返回请求头与容器信息，常用于测试反向代理 / 网络连通性（自建示例应用）。
+    en: A tiny HTTP service that echoes request headers and container info; handy for testing reverse proxies / networking (custom example app).
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://github.com/traefik/whoami
+  github: https://github.com/traefik/whoami
+  document: https://github.com/traefik/whoami
+  architectures:
+    - amd64
+    - arm64
